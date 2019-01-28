@@ -1,18 +1,31 @@
-<!-- notice how both the opening <html> tag and the closing </html> tag are NOT indented so you can clearly see the start and end of the code -->
 <html>
-	
-	<!-- the <head> section is for all the information that is needed by the browser but does NOT show up on the page -->
+
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Displaying Rows & Columns</title>
+		<title>Using Element IDs</title>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 
-	<!-- the <body> section is for all the content that is actually displayed on the page -->
 	<body>
-		<div class="square-div purple"></div>
-		<div class="square-div gold"></div>
-		<div class="square-div slate"></div>
+		<!-- 1st Column -->
+		<div class="col rams-blue center-content" id="rams-column">
+			<!-- IN THIS TASK WE ARE MAKING THE IMAGES (NOT THE DIVS) CLICKABLE -->
+			<img src="images/rams_logo.png" class="restrict-img-size" onclick="allOpaque(this)"/>
+		</div>
+		
+		<!-- 2nd Column -->
+		<div class="col">
+			<img src="" class="restrict-img-size"/>
+		</div>
+		
+		<!-- 3rd Column -->
+		<div class="col pats-silver center-content" id="pats-column">
+			<!-- IN THIS TASK WE ARE MAKING THE IMAGES (NOT THE DIVS) CLICKABLE -->
+			<img src="images/pats_logo.png" id="pats" class="restrict-img-size" onClick="removeColor(this)" />
+		</div>
+		
+		<script src="script.js"></script>
 	</body>
+	
 </html>
